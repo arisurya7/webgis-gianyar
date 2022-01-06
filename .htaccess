@@ -1,0 +1,6 @@
+RewriteEngine On
+
+RewriteRule ^Home index.php
+RewriteRule ^Peta map.php
+RewriteRule ^TentangKami tentang.php
+RewriteRule ^KontakKami kontak.php
