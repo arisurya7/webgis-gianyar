@@ -8,7 +8,7 @@
     <div class="w-10/12 mx-auto">
 
         <section class="container mt-16 mb-28" >
-            <h1 class="text-center text-4xl mb-3 font-bold tracking-widest" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">Kontak Kami</h1>
+            <h1 class="text-center text-4xl mb-3 font-bold tracking-widest text-sky-800" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">Kontak Kami</h1>
             <p class="text-center mb-8 text-gray-500" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">Jika anda tertarik mengenal kami lebih dekat atau ingin membantu kami
                 mengembangkan sistem ini, kami dengan senang hati menerima anda. </p>
             <div class="grid lg:grid-cols-3 grid-cols-1 gap-4">

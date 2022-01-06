@@ -10,7 +10,7 @@
             </ul>
         </div>
         <div class="flex gap-10 mt-12 md:mt-0 text-sky-400 font-extralight text-xs">
-            <p>Made with ♥ with Portal Gianyar Team</p>
+            <p>Made with ♥ Portal Gianyar Team</p>
         </div>
     </div>
 </footer>

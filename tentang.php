@@ -9,7 +9,7 @@
         <section class="w-full mb-28">
             <div class="grid lg:gird-cols-2 sm:grid-cols-1 lg:flex justify-center items-center mt-16">
                 <div class="lg:w-full " data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
-                    <h1 class="text-4xl font-bold lg:pb-3">Tentang Kami</h1>
+                    <h1 class="text-4xl text-sky-800 font-bold lg:pb-3">Tentang Kami</h1>
                     <p class="text-gray-500 mr-8">Kami merupakan mahasiswa Informatika yang sedang mengembangkan 
                         Aplikasi Sistem Informasi Geografi berbasis web. Website ini masih tahap pengembangan yaitu memberikan informasi lokasi wisata yang ada di kabupaten Gianyar, Bali. Kami mengembangkan website ini dengan menggunakan QGIS dan Geoserver.
                     </p>
@@ -65,7 +65,7 @@
                 </div>
                 <div class="lg:w-full mx-auto" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
                     <div class="space-x-10">
-                        <h1 class="ml-10 text-4xl pb-2">Cerita dan Misi Kami</h1>
+                        <h1 class="ml-10 text-4xl pb-2 text-sky-800">Cerita dan Misi Kami</h1>
                         <p class="pb-3 leading-7 text-gray-500">Perkembangan teknologi yang semakin cepat
                             membuat kami harus terus melangkah dan membuat sesuatu yang bermanfaat bagi masyarakat. Dengan
                             membuat Portal Gianyar kami berharap wisatawan yang akan datang ke bali khususnya gianyar dapat dengan mudah

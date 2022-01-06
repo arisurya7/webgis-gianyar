@@ -12,10 +12,10 @@
             <div class=" flex flex-col-reverse lg:flex-row items-center gap-12 mt-14 lg:mt-28">
                 <!-- Content -->
                 <div class="flex flex-1 flex-col items-center lg:items-start" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-                    <h2 class="text-bookmark-blue text-3xl md:text-4 lg:text-5xl text-center lg:text-left mb-6">
+                    <h2 class="text-sky-700 text-3xl md:text-4 lg:text-5xl text-center lg:text-left mb-6">
                         Temukan Lokasi Destinasi Wisatamu!
                     </h2>
-                    <p class="text-bookmark-grey text-lg text-center lg:text-left mb-6">
+                    <p class="text-gray-00 text-lg text-center lg:text-left mb-6">
                         Kami hadir bagi kalian yang ingin mencari tempat wisata diwilayah gianyar dengan mudah! Yuk mulai coba menggunakan Portal Gianyar dengan mengklik button dibawah ini.
                     </p>
                     <div class="flex justify-center flex-wrap gap-6">
