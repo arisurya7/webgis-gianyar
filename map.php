@@ -91,8 +91,8 @@
             $query = mysqli_query($connect, "SELECT * FROM Pariwisata");
             while ($result = mysqli_fetch_array($query)) {
         ?>
-                var content = "<img src='assets/img/<?= $result['foto'] ?>' style='width:300px;'><h4><?= $result['judul'] ?></h4><p><?= $result['deskripsi'] ?></p>"
-                var d = L.marker([<?= $result['lng'] ?>, <?= $result['lat'] ?>]).bindPopup(content)
+                var content = "<img class='p-1' src='assets/img/<?= $result['foto'] ?>' style='width:300px;'><h1 class='mt-4 fw-bold fs-6'><?= $result['judul'] ?></h1><p><?= $result['deskripsi'] ?></p>"
+                var d = L.marker([<?= $result['lat'] ?>, <?= $result['lng'] ?>]).bindPopup(content)
                 pariwisata.push(d)
         <?php
             }
@@ -111,12 +111,7 @@
 
         }
 
-        <?php
-        $conn = mysqli_connect("localhost", "root", "")
-
-        ?>
         L.control.layers(basemap, overlaymap).addTo(map)
-
 
         map.on('click', function(e) {
             var pos = e.latlng;

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 07, 2022 at 05:09 AM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.1.0
+-- Waktu pembuatan: 07 Jan 2022 pada 08.14
+-- Versi server: 10.4.21-MariaDB
+-- Versi PHP: 8.0.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `administrasidesa_ar`
+-- Struktur dari tabel `administrasidesa_ar`
 --
 
 CREATE TABLE `administrasidesa_ar` (
@@ -60,7 +60,7 @@ CREATE TABLE `administrasidesa_ar` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `administrasidesa_ar`
+-- Dumping data untuk tabel `administrasidesa_ar`
 --
 
 INSERT INTO `administrasidesa_ar` (`OGR_FID`, `SHAPE`, `kdppum`, `namobj`, `remark`, `kdpbps`, `fcode`, `luaswh`, `uupp`, `srs_id`, `lcode`, `metadata`, `kdebps`, `kdepum`, `kdcbps`, `kdcpum`, `kdbbps`, `kdbpum`, `wadmkd`, `wiadkd`, `wadmkc`, `wiadkc`, `wadmkk`, `wiadkk`, `wadmpr`, `wiadpr`, `tipadm`, `shape_leng`, `shape_area`) VALUES
@@ -156,7 +156,7 @@ INSERT INTO `administrasidesa_ar` (`OGR_FID`, `SHAPE`, `kdppum`, `namobj`, `rema
 -- --------------------------------------------------------
 
 --
--- Table structure for table `geometry_columns`
+-- Struktur dari tabel `geometry_columns`
 --
 
 CREATE TABLE `geometry_columns` (
@@ -170,7 +170,7 @@ CREATE TABLE `geometry_columns` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `geometry_columns`
+-- Dumping data untuk tabel `geometry_columns`
 --
 
 INSERT INTO `geometry_columns` (`F_TABLE_CATALOG`, `F_TABLE_SCHEMA`, `F_TABLE_NAME`, `F_GEOMETRY_COLUMN`, `COORD_DIMENSION`, `SRID`, `TYPE`) VALUES
@@ -179,7 +179,7 @@ INSERT INTO `geometry_columns` (`F_TABLE_CATALOG`, `F_TABLE_SCHEMA`, `F_TABLE_NA
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pariwisata`
+-- Struktur dari tabel `pariwisata`
 --
 
 CREATE TABLE `pariwisata` (
@@ -192,19 +192,18 @@ CREATE TABLE `pariwisata` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `pariwisata`
+-- Dumping data untuk tabel `pariwisata`
 --
 
 INSERT INTO `pariwisata` (`id`, `judul`, `deskripsi`, `foto`, `lat`, `lng`) VALUES
-(2, 'Kemenuh Butterfly Park', 'Taman dengan tanaman tropis dan beragam kupu-kupu, plus restoran, museum, dan toko suvenir.', 'pariwisata1.jpg', 115.284, -8.56529),
-(3, 'Tegenungan Waterfall', 'Air terjun indah di hutan rimbun yang berlokasi di atas area rendam dangkal, dengan kafe di sekitarnya.', 'pariwisata2.jpg', 115.289, -8.57533),
+(3, 'Tegenungan Waterfall', 'Air terjun indah di hutan rimbun yang berlokasi di atas area rendam dangkal, dengan kafe di sekitarnya.', 'pariwisata2.jpg', -8.57533, 115.289),
 (4, 'Air Terjun Kanto Lampo', 'Air Terjun Kanto Lampo atau Kanto Lampo Waterfall merupakan sebuah air terjun yang berada di dataran rendah sehingga akses untuk menuju lokasi tak terlalu susah. Bentuk air terjunnya yang berundak-undak membuatnya semakin istimewa. Pemberian nama Kanto Lampo didasari oleh kehadiran pohon yang tumbuh di sekitar sungai.Air Terjun Kanto Lampo terbentuk diakibatkan luapan air di dalam tanah yang tersumbat, air tanah tersebut digunakan untuk saluran irigasi. Selain itu, lokasi air terjun ini dianggap suci oleh komunitas adat, karena dianggap tempat suci atau beji untuk Mendak Toya Ning (Mencari Air Suci) untuk upacara Dewa Yadnya atau Pitra Yadnya. Juga terdapat sebuah goa di sebrang sungai yang konon kataya digunakan pasukan Belanda sebagai tempat rahasia dalam menyusun strategi.', 'Kanto-lampo.jpg', -8.53207, 115.331),
-(5, 'Air Terjun Goa Rang-Reng', 'Sangat cocok untuk para petualang, air terjun ini hanya dapat diakses dengan sepeda motor. Jalur kecil menuju air terjun terbelah menjadi dua – satu arah menuju gua suci dan yang lainnya menuju air terjun itu sendiri. Anda dipersilakan untuk menjelajahi gua tetapi hanya dengan salah satu pemandu lokal yang siaga. Setelah turun sebentar, Anda akan mencapai air terjun yang mengalir dengan lembut. Tidak seperti air terjun lainnya yang bergemuruh pada 90 derajat, Goa Rang Reng mengalir menuruni sudut yang landai dengan kolam alami di puncaknya yang dapat Anda gunakan untuk berenang.', 'goa-rang-reng.jpg', -8.50839, 115.33),
-(6, 'Air Terjun Sumampan', 'Objek wisata air terjun Sumampan Gianyar ini terbentuk secara tidak sengaja, awalnya air terjun ini tidak pernah ada, berbeda dengan keberadaan air terjun di Bali, yang biasanya terbentuk sudah lama, dan terkadang baru ditemukan sehingga menjadi tujuan wisata baru. Namun objek wisata air terjun Sumampan ini terbentuk karena rembesan air dari bocoran terowongan irigasi yang menuju kawasan Blahbatuh, rembesan tersebut menjalar ke sisi tebing sejak lama, tetapi karena terjadi penggalian batu padas di bawah tebing yang terus menerus, membuat aliran air terjun tersebut terfokus pada satu titik sehingga terbentuklah sebuah air terjun.', 'sumampan.jpg', -8.54938, 115.292),
-(7, 'Pasar Seni Sukawati', 'Pasar Seni Sukawati merupakan pasar seni yang terletak di Kabupaten Gianyar, Bali. Pasar ini menjual berbagai kerajinan seni khas Bali seperti sandal manik-manik, pakaian, tas, lukisan, patung kayu dan lain - lain. Pasar ini berdiri sekitar tahun 1980an dan dibuka setiap hari mulai pukul 08.00 hingga pukul 18.00 WITA.', 'pasarsenisukawati.jpg', -8.59484, 115.283),
+(5, 'Air Terjun Goa Rang-Reng', 'Sangat cocok untuk para petualang, air terjun ini hanya dapat diakses dengan sepeda motor. Jalur kecil menuju air terjun terbelah menjadi dua – satu arah menuju gua suci dan yang lainnya menuju air terjun itu sendiri. Anda dipersilakan untuk menjelajahi gua tetapi hanya dengan salah satu pemandu lokal yang siaga. Setelah turun sebentar, Anda akan mencapai air terjun yang mengalir dengan lembut. Tidak seperti air terjun lainnya yang bergemuruh pada 90 derajat, Goa Rang Reng mengalir menuruni sudut yang landai dengan kolam alami di puncaknya yang dapat Anda gunakan untuk berenang.', 'goa-rang-reng.jpg', -8.51536, 115.331),
+(6, 'Air Terjun Sumampan', 'Objek wisata air terjun Sumampan Gianyar ini terbentuk secara tidak sengaja, awalnya air terjun ini tidak pernah ada, berbeda dengan keberadaan air terjun di Bali, yang biasanya terbentuk sudah lama, dan terkadang baru ditemukan sehingga menjadi tujuan wisata baru. Namun objek wisata air terjun Sumampan ini terbentuk karena rembesan air dari bocoran terowongan irigasi yang menuju kawasan Blahbatuh, rembesan tersebut menjalar ke sisi tebing sejak lama, tetapi karena terjadi penggalian batu padas di bawah tebing yang terus menerus, membuat aliran air terjun tersebut terfokus pada satu titik sehingga terbentuklah sebuah air terjun.', 'sumampan.jpg', -8.5515, 115.292),
+(7, 'Pasar Seni Sukawati', 'Pasar Seni Sukawati merupakan pasar seni yang terletak di Kabupaten Gianyar, Bali. Pasar ini menjual berbagai kerajinan seni khas Bali seperti sandal manik-manik, pakaian, tas, lukisan, patung kayu dan lain - lain. Pasar ini berdiri sekitar tahun 1980an dan dibuka setiap hari mulai pukul 08.00 hingga pukul 18.00 WITA.', 'pasarsenisukawati.jpg', -8.59653, 115.283),
 (9, 'Bali Fun World', 'Wahana permainan di Bali Fun World di Gianyar ini lengkap dan tidak berbahaya, membuat mereka bisa beradaptasi menikmati berbagai tantangan dan keseruan permainan yang disediakan. Pengelola merancang khusus tempat wisata anak ini, antara balita dan umur di atasnya dipisahkan, sehingga mereka bisa bermain dengan teman-teman seusianya.', 'balifunworld.jpg', -8.58597, 115.278),
-(10, 'Bali Zoo', 'Kebun binatang luas berisi orang utan, gajah & singa Afrika, dengan aktivitas & pertunjukan yang interaktif.', 'balizoo.jpg', -8.59103, 115.267),
-(11, 'Bali Bird Park', 'Bali Bird Park adalah satu-satunya taman burung yang ada di Bali. Koleksinya cukup lengkap, tempatnya juga sangat rindang. Jalak Bali salah satu koleksi ditempat ini, merupakan jenis burung langka yang juga dikembangbiakkan. Wisata Bali Bird Park and Reptile Park tidak hanya menjadi tempat penangkaran bagi aneka jenis burung, tapi juga berbagai hewan lainnya seperti komodo, ular, kadal, iguana, dan masih banyak lagi.', 'balibird.jpg', -8.59692, 115.251),
+(10, 'Bali Zoo', 'Kebun binatang luas berisi orang utan, gajah & singa Afrika, dengan aktivitas & pertunjukan yang interaktif.', 'balizoo.jpg', -8.59199, 115.267),
+(11, 'Bali Bird Park', 'Bali Bird Park adalah satu-satunya taman burung yang ada di Bali. Koleksinya cukup lengkap, tempatnya juga sangat rindang. Jalak Bali salah satu koleksi ditempat ini, merupakan jenis burung langka yang juga dikembangbiakkan. Wisata Bali Bird Park and Reptile Park tidak hanya menjadi tempat penangkaran bagi aneka jenis burung, tapi juga berbagai hewan lainnya seperti komodo, ular, kadal, iguana, dan masih banyak lagi.', 'balibird.jpg', -8.59998, 115.252),
 (12, 'Hidden Canyon Beji Guwang', 'Sebuah ngarai tersembunyi yang disebut Hidden Canyon Beji Guwang Sukawati oleh wisatawan asing. Ngarai (Canyon = Bahasa Inggris) merupakan lembah yang dalam dan sempit dengan lereng bebatuan yang dibentuk akibat erosi aliran air sungai sehingga memberikan kesan artistik pada setiap dinding tebing - tebing sepanjang aliran sungai Beji Guwang.', 'hiddencanyonguwang.jpg', -8.60843, 115.29),
 (13, 'Pantai Lembeng', 'Tempat rekreasi alam pantai Lembeng menyuguhkan pantai pasir hitam legam, terhampar luas dari Barat ke Timur dan menghadap ke arah Selatan. Pemandangan laut biru tersaji indah di depan mata dengan gulungan ombaknya yang cukup tinggi dan panjang sehingga ideal untuk rekreasi surfing, dari kejauhan anda bisa melihat hotel Grand Ina Bali Beach yang ada di pantai Sanur yang sekaligus merupakan dermaga speed boat atau fast boat ke Nusa Lembongan dan Nusa Penida.', 'pantailembeng.jpg', -8.64662, 115.278),
 (14, 'Museum Blanco Renaissance', 'Museum Blanco Renaissance terletak di Jl. Raya Penestanan, No. 8, Sayad, Ubud, Gianyar, Bali. Tempat ini sangat cocok untuk Anda yang hobi melakukan wisata seni, wisata budaya, dan juga wisata sejarah.', 'museumblanco.jpg', -8.50468, 115.254),
@@ -222,7 +221,7 @@ INSERT INTO `pariwisata` (`id`, `judul`, `deskripsi`, `foto`, `lat`, `lng`) VALU
 (26, 'Tegallalang Rice Terrace', 'Kaki bukit berundak indah yang memiliki sawah di tengah pepohonan rimbun, ditambah zip line dan ayunan hutan.', 'riceterrace.jpg', -8.4273, 115.281),
 (27, 'Lembah Bidadari', 'Lembah bidadari adalah sebuah mata air alami yang terletak di Tegalalang. Dikelilingi oleh perkebunan, hutan, sungai dan memiliki suasana yang segar.', 'lembahbidadari.jpg', -8.38757, 115.288),
 (28, 'Ayung River Rafting Bali', 'Sungai Ayung menyuguhkan pemandangan lembah, air terjun dan tebing indah. Bahkan pada bagian sungainya saat mengikuti rekreasi rafting di Ayung anda bisa menemukan relief Ramayana terpatri indah pada dinding tebing, seniman-seniman lokal menciptakan hasil karya seni bisa dinikmati oleh wisatawan yang ikut wisata arung jeram ini.', 'sungaiayung.jpg', -8.46727, 115.248),
-(29, 'Taman Nusa', 'Disini wisatawan akan melihat 60 rumah tradisional dari berbagai suku atau etsnis di Indonesia. Lokasinya di wilayah pedesaan dengan suguhan alam indah sungai Melangit. Taman ini juga menawarkan sensasi liburan dengan nuansa jaman prasejarah, jaman kerajaan, masa penjajahan, masa kemerdekaan dan sampai gambaran masa depan.', 'tamannusa.jpg', -8.52421, 115.357),
+(29, 'Taman Nusa', 'Disini wisatawan akan melihat 60 rumah tradisional dari berbagai suku atau etsnis di Indonesia. Lokasinya di wilayah pedesaan dengan suguhan alam indah sungai Melangit. Taman ini juga menawarkan sensasi liburan dengan nuansa jaman prasejarah, jaman kerajaan, masa penjajahan, masa kemerdekaan dan sampai gambaran masa depan.', 'tamannusa.jpg', -8.52862, 115.359),
 (30, 'Pantai Lebih', 'Pantai Lebih ini masih sangat alami dan asri. Suasananya sangat tenteram dan nyaman membuat para wisatawan akan betah dan lama-lama untuk menikmati pemandangan yang bagus.', 'pantailebih.jpg', -8.58007, 115.355),
 (31, 'Bukit Jati Waterboom', 'Objek wisata ini bukan hanya menawarkan panorama alam perbukitan yang menawan namun juga terdapat sebuah waterboom yang cocok sekali untuk mengisi waktu libur. Aktivitas pedesaan yang sudah sangat jarang bisa kamu lakukan di tempat ini selain itu nuansa yang sangat alami membuat siapa saja betah berlama – lama di tempat ini.', 'bukitjati.jpg', -8.53471, 115.336),
 (32, 'Sekar Bumi Tropical Farm', 'Disini anda bisa menikmati beragam fasilitas pendukung liburan anda mulai dari wahana outbond, berkemah, jungle tracking dan masih banyak yang lainnya.', 'sekarbumi.jpg', -8.34345, 115.292),
@@ -233,7 +232,7 @@ INSERT INTO `pariwisata` (`id`, `judul`, `deskripsi`, `foto`, `lat`, `lng`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `spatial_ref_sys`
+-- Struktur dari tabel `spatial_ref_sys`
 --
 
 CREATE TABLE `spatial_ref_sys` (
@@ -244,7 +243,7 @@ CREATE TABLE `spatial_ref_sys` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `spatial_ref_sys`
+-- Dumping data untuk tabel `spatial_ref_sys`
 --
 
 INSERT INTO `spatial_ref_sys` (`SRID`, `AUTH_NAME`, `AUTH_SRID`, `SRTEXT`) VALUES
@@ -255,30 +254,30 @@ INSERT INTO `spatial_ref_sys` (`SRID`, `AUTH_NAME`, `AUTH_SRID`, `SRTEXT`) VALUE
 --
 
 --
--- Indexes for table `administrasidesa_ar`
+-- Indeks untuk tabel `administrasidesa_ar`
 --
 ALTER TABLE `administrasidesa_ar`
   ADD UNIQUE KEY `OGR_FID` (`OGR_FID`),
   ADD SPATIAL KEY `SHAPE` (`SHAPE`);
 
 --
--- Indexes for table `pariwisata`
+-- Indeks untuk tabel `pariwisata`
 --
 ALTER TABLE `pariwisata`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `administrasidesa_ar`
+-- AUTO_INCREMENT untuk tabel `administrasidesa_ar`
 --
 ALTER TABLE `administrasidesa_ar`
   MODIFY `OGR_FID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
 
 --
--- AUTO_INCREMENT for table `pariwisata`
+-- AUTO_INCREMENT untuk tabel `pariwisata`
 --
 ALTER TABLE `pariwisata`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
