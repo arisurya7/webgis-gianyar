@@ -35,31 +35,39 @@
                 <a class="text-gray-600  px-4 py-3 mt-1 text-sm sm:text-base  font-semibold hover:text-sky-700 " href="Peta">Peta</a>
                 <a class="text-gray-600  px-4 py-3 mt-1 text-sm sm:text-base  font-semibold hover:text-sky-700 " href="TentangKami">TENTANG KAMI</a>
                 <a class="text-gray-600  px-4 py-3 mt-1 text-sm sm:text-base  font-semibold hover:text-sky-700" href="KontakKami">Kontak Kami</a>
-
-
         </div>
     </div>
+    <!-- End Navbar -->
+
     <div class="h-16 w-full text-gray-700 z-50">
     </div>
-    <!-- Geoserver -->
+
+    <!-- Container Map -->
     <div id="container" class=" w-full h-3/5 mx-auto relative z-0" style="max-height:90%;" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-        <div id="mapdiv">
-        </div>
+        <div id="mapdiv"></div>
         <div id="legenddiv" class="">
             <div class="legend">
                 <h2 class="font-bold text-lg">Map Legend</h2>
-                <div id="gianyar_administrasidesa_ar" class="legend_item" style="">
+                <div id="gianyar_administrasidesa_ar" class="legend_item">
                     <p>Batas Desa Gianyar</p>
                     <img src="/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=gianyar:administrasidesa_ar" alt="">
                 </div>
             </div>
         </div>
     </div>
-    <!-- aos -->
+    <!-- End Container Map -->
+    
+    <!-- Footer -->
     <?php include 'layout/footer.php'; ?>
+    <!-- End Footer -->
 
+    <!-- Scripts Map -->
     <script>
+
+        // View Map
         var map = L.map('mapdiv').setView([-8.497, 115.284], 14);
+
+        // Layer Base Map OpenStreetMap
         var osm = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
             attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
             maxZoom: 18,
@@ -67,9 +75,9 @@
             tileSize: 512,
             zoomOffset: -1,
             accessToken: 'pk.eyJ1IjoiYXJpc3VyeWEiLCJhIjoiY2t4endqNjIwN3B5NTJub2N0bWs0bDcycyJ9.dvYtz2gCiW6TQtfwrHt1mQ'
-        })
-        osm.addTo(map);
+        }).addTo(map);
 
+        // Layer Administrasi Desa Gianyar
         var gianyar = L.tileLayer.wms("/geoserver/wms?", {
             attribution: '&copy; geospansial',
             layers: "gianyar:administrasidesa_ar",
@@ -77,13 +85,7 @@
             transparent: true
         }).setOpacity(0.3);
 
-        var pariwisata_gianyar = L.tileLayer.wms("/geoserver/wms?", {
-            attribution: '&copy; geospansial',
-            layers: "gianyar:PariwisataGianyar",
-            format: "image/png",
-            transparent: true
-        });
-
+        // Layer Point Pariwisata
         var pariwisata = []
         <?php
         $connect = mysqli_connect('localhost', 'root', '', 'gianyar');
@@ -99,20 +101,24 @@
         }
         ?>
 
+        //Layer Group Point Pariwisata
         var par = L.layerGroup(pariwisata)
 
+        // Base Map
         var basemap = {
             'OpenStreetMap': osm
         }
 
+        // Overlay Map
         var overlaymap = {
             'Batas Desa Gianyar': gianyar,
             'Pariwisata Gianyar': par
-
         }
 
+        // Add Control Layer
         L.control.layers(basemap, overlaymap).addTo(map)
 
+        // Object Info
         map.on('click', function(e) {
             var pos = e.latlng;
             var pt = map.latLngToContainerPoint(pos);
@@ -140,7 +146,6 @@
                     bbox: west + ',' + south + ',' + east + ',' + north
                 },
                 success: function(ajaxresult) {
-                    console.log(ajaxresult)
                     if (typeof(ajaxresult) != 'undifined') {
                         var data = ajaxresult.features[0].properties;
                         var village = data['namobj'];
@@ -148,7 +153,6 @@
                         var regency = data['wadmkk'];
                         var province = data['wadmpr'];
 
-                        console.log(village + ',' + district + ',' + regency + ',' + province)
                         var content = "<table class='table'><tr><th>Field</th><th>Value</th></tr><tr><td>Desa</td><td>" + village + "</td></tr><tr><td>Kecamatan</td><td>" + district + "</td></tr><tr><td>Kabupaten</td><td>" + regency + "</td></tr><tr><td>Provinsi</td><td>" + province + "</td></tr></table>"
                         L.popup().setLatLng(pos).setContent(content).openOn(map);
                     }
@@ -157,27 +161,25 @@
                 error: function(jqXHR, textStatus, errorThrown) {
                     alert('error');
                 }
-
-
             });
         });
 
-
-
+        // Display Legend
         map.on('layeradd', function(e) {
             if (e.layer.options.layers) {
-                var layerId = e.layer.options.layers.replace(':', '_');
+                var layerId = e.layer.options.layers.replace(':', '_');  //ginyar:administrasidesa_ar -> gianyar_administrasidesa_ar
                 $('#' + layerId).show()
             }
-
         });
 
+        // Hide Legend
         map.on('layerremove', function(e) {
             if (e.layer.options.layers) {
                 var layerId = e.layer.options.layers.replace(':', '_');
                 $('#' + layerId).hide()
             }
         });
+
     </script>
 </body>
 
